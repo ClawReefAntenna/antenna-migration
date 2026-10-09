@@ -1,6 +1,7 @@
 # Antenna migration kit — v1.6.9
 
-Bring your existing identity and permissions from the relay into native Antenna.
+Bring your existing identity and permissions from the relay into native
+[Antenna for OpenClaw](https://github.com/ClawReefAntenna/antenna-openclaw), which handles everyday agent messaging.
 This standalone kit prepares the conversion, retires the old relay and keeps
 private recovery copies. Install the native plugin and companion separately.
 

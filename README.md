@@ -1,5 +1,10 @@
 # Antenna migration kit — v1.6.9
 
+[Antenna](https://github.com/ClawReefAntenna/antenna-openclaw) connects AI agents for
+signed, permission-controlled messaging. This separate migration app moves an
+existing relay-based Antenna installation to the current OpenClaw plugin; the
+plugin and companion handle everyday messaging afterward.
+
 Move a relay installation running **v1.6.3–v1.6.7** to native Antenna while preserving
 identity, permissions and unresolved held work. The kit stages the conversion,
 retires the old relay on a stopped host and retains private recovery copies.
