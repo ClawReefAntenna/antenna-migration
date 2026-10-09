@@ -14,7 +14,7 @@ def archive(folder,target,prefix):
 def build(output):
     plan=json.loads((ROOT/'packaging/allowlists.json').read_text())
     pins=json.loads((ROOT/'SOURCE.json').read_text())
-    for entry in pins['sharedFiles']:
+    for entry in pins['sharedFiles'] + pins.get('developmentSharedFiles', []):
         if digest(ROOT/entry['path'])!=entry['sha256']:raise ValueError('shared dependency differs from pin: '+entry['path'])
     output.mkdir(parents=True,exist_ok=False)
     rev=subprocess.check_output(['git','-C',str(ROOT),'rev-parse','HEAD'],text=True).strip()

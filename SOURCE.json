@@ -5,7 +5,7 @@
     "repository": "https://github.com/ClawReefAntenna/antenna-openclaw",
     "revision": "d9351d0d38b0c94f68b9504ca59c8093e5acfe49"
   },
-  "note": "App-specific files are now maintained here. Shared files below are pinned copies; update deliberately and rerun app tests. No build-time upstream checkout is required.",
+  "note": "App-specific files are now maintained here. Shared files below are pinned copies; update deliberately and rerun app tests. No build-time upstream checkout is required. sharedFiles are shipped dependencies; developmentSharedFiles are source-only test dependencies, not included in the operator archive.",
   "sharedFiles": [
     {
       "path": "LICENSE",
@@ -64,12 +64,14 @@
       "sha256": "9cd39b5445b998f3aebb762b50c9f0bd77def6ec0ff41f5432d3b14097fc03cf"
     },
     {
-      "path": "plugin/tests/config-write.mjs",
-      "sha256": "298e37173d8f723eaf809e60e8219293bdd21c4dd2d1b5ddf185ff5163a00bf2"
-    },
-    {
       "path": "plugin/transport.mjs",
       "sha256": "d4c714503620ffff0ed5971923661a6ebfe8da1bff9d86e613ce8e6d73c31844"
+    }
+  ],
+  "developmentSharedFiles": [
+    {
+      "path": "plugin/tests/config-write.mjs",
+      "sha256": "298e37173d8f723eaf809e60e8219293bdd21c4dd2d1b5ddf185ff5163a00bf2"
     }
   ]
 }

@@ -21,9 +21,26 @@ App-specific changes are maintained here, not copied back to OpenClaw.
 Publish the matching manifest and SHA256SUMS beside the archive. Migration compatibility and recovery qualification are documented in the
 migration guide.
 
+## Operator archive contents
+
+The operator archive contains the two current guides, license, dependency provenance,
+three command entry points and their required modules/resources: 24 files total.
+Regression tests, this maintainer guide, historical `plugin/MIGRATION.md`, and
+build/verification tools stay in the source repository and full-source archive.
+
+`SOURCE.json` separates shipped `sharedFiles` from source-only
+`developmentSharedFiles`. The builder checks both sets of pins. The verifier
+checks the pristine extracted inventory and dependency closure, refuses development
+files in the operator archive, then copies only the five regression fixtures from
+the matching clean source revision into a temporary extraction. Tests run against
+shipped implementation bytes; the downloadable archive is never modified.
+
+Run migration verification apart from other same-user Antenna CLI/gateway fixtures:
+its stopped-writer check deliberately sees those processes. Do not bypass it.
+
 ## Regression checks
 
-Run these from the source or extracted kit root when maintaining the app. They
+Run these from the source checkout root when maintaining the app. They
 are development checks, not operator cutover steps.
 
 ```sh

@@ -14,12 +14,9 @@
       "migration/README.md",
       "README.md",
       "migration/cli.mjs",
-      "migration/cutover-test.mjs",
       "migration/cutover.mjs",
       "migration/retire.mjs",
-      "migration/schema-test.mjs",
       "migration/schema.mjs",
-      "plugin/MIGRATION.md",
       "plugin/capacity.mjs",
       "plugin/config-write.mjs",
       "plugin/dumb-worker.mjs",
@@ -35,12 +32,8 @@
       "plugin/ruleset.mjs",
       "plugin/scanners.mjs",
       "plugin/smart.mjs",
-      "plugin/tests/config-write.mjs",
-      "plugin/tests/migration-doctor.mjs",
       "plugin/transport.mjs",
-      "migration/legacy-compat-test.mjs",
-      "SOURCE.json",
-      "packaging/README.md"
+      "SOURCE.json"
     ]
   }
 }
