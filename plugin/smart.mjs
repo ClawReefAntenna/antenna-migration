@@ -1,4 +1,4 @@
-import {operatorAuth} from './operator-auth.mjs';
+import {operatorAuth,localGatewayUrl} from './operator-auth.mjs';
 import {createHash} from 'node:crypto';
 import {LIMITS} from './limits.mjs';
 import {acquire} from './capacity.mjs';
@@ -34,7 +34,7 @@ export function createSmart(selection,{complete,resourceDir,maxActive=LIMITS.act
    const result=await Promise.race([complete({model:selection.modelId,systemPrompt:rubric,messages:[{role:'user',content:prompt}],purpose:'antenna.mcs',maxTokens:LIMITS.outputTokens,signal:controller.signal,execution:{mode:'isolated-agent-runtime',timeoutMs:remaining}}),timeout]);
    if(result.execution?.mode!=='isolated-agent-runtime'||result.stopReason&&result.stopReason!=='stop'||typeof result.text!=='string'||Buffer.byteLength(result.text)>LIMITS.responseBytes) return {...incomplete('invalid_runtime_response'),requests};
    if(result.provider+'/'+result.model!==selection.modelId)return {...incomplete('model_identity_changed'),requests};
-   const value=validateVerdict(JSON.parse(result.text),body);
+   const value=validateVerdict(JSON.parse(result.text));
    return {...value,version:RUBRIC,model:selection.modelId,requests,elapsedMs:performance.now()-began};
   }catch(e){
    // Stable runtime codes only; never return raw provider errors or credentials.
@@ -45,5 +45,5 @@ export function createSmart(selection,{complete,resourceDir,maxActive=LIMITS.act
 }
 export async function gatewayScan(host,selection,body){
  const {callGatewayFromCli}=await import('openclaw/plugin-sdk/gateway-runtime');
- return callGatewayFromCli('antenna.scan',{url:`ws://127.0.0.1:${host.gateway.port??18789}`,...operatorAuth(host,[host.plugins?.entries?.antenna?.config?.bearer]),timeout:String(LIMITS.smartMs+5000),json:true},{model:selection.model,identity:selection.identity,body},{scopes:['operator.admin'],progress:false});
+ return callGatewayFromCli('antenna.scan',{url:localGatewayUrl(host),...operatorAuth(host,[host.plugins?.entries?.antenna?.config?.bearer]),timeout:String(LIMITS.smartMs+5000),json:true},{model:selection.model,identity:selection.identity,body},{scopes:['operator.admin'],progress:false});
 }
