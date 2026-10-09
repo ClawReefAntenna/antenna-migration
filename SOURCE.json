@@ -3,7 +3,7 @@
   "schema": 1,
   "kind": "migration",
   "candidate": "oc168-sec002-004.1",
-  "sourceRevision": "f259e533f71ca683f74a782b3b321564dadf3d7d",
+  "sourceRevision": "5538e5a1c33615ae6a2f61724d403e10b225013c",
   "compatibility": {
     "runtime": "1.6.8 schema 2 candidate (not a new public release)",
     "transport": "antenna-plugin-v2",
