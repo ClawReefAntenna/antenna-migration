@@ -1,6 +1,13 @@
-> Local fixture-qualified candidate: see [stopped-host app and recovery](../migration/README.md). Live cutover and release qualification remain separate.
+> **Historical engineering reference.** For the current stopped-host workflow,
+> use the [migration kit guide](https://github.com/ClawReefAntenna/antenna-migration/blob/v1.6.9/migration/README.md) and
+> [download the kit](https://github.com/ClawReefAntenna/antenna-migration/releases/download/v1.6.9/antenna-migration-1.6.9.tgz). For native installation and updates, use the
+> [User Guide](https://github.com/ClawReefAntenna/antenna-openclaw/blob/v1.6.9/references/USER-GUIDE.md).
 
 # Explicit legacy migration — v1.6.8
+
+The body below is retained engineering reference, not current installation
+instructions. See the source-only [stopped-host app and recovery](../migration/README.md)
+for the later cutover implementation.
 
 Compatibility tier: **documented manual migration**, not seamless live compatibility.
 Do this against an isolated copy first. The original preparation commands below do not apply changes. The separate

@@ -2,13 +2,13 @@
   "sourceDirty": false,
   "schema": 1,
   "kind": "migration",
-  "candidate": "oc168-sec002-004.1",
-  "sourceRevision": "5538e5a1c33615ae6a2f61724d403e10b225013c",
+  "candidate": "1.6.9",
+  "sourceRevision": "debd13e1f5880e8ee61aebbd29a0ebbed14efc57",
   "compatibility": {
-    "runtime": "1.6.8 schema 2 candidate (not a new public release)",
+    "runtime": "1.6.9 schema 2; compatible with 1.6.8 native state and antenna-plugin-v2 peers",
     "transport": "antenna-plugin-v2",
     "limits": "antenna-limits-2",
-    "release_version": "not selected"
+    "release_version": "1.6.9"
   },
   "files": [
     {
@@ -21,14 +21,14 @@
     {
       "path": "migration/README.md",
       "source": "migration/README.md",
-      "sha256": "fd0cbfb3e89b080b69d9e9538b809353fc93b80bf33f30e85d58c2d7bca4359f",
+      "sha256": "22bd99478d72217d0f683bd8da52f3eadbd86171a56522c8b695d64c851e31cb",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
     {
       "path": "README.md",
       "source": "migration/REPOSITORY.md",
-      "sha256": "63ef94aa05536f15e521413c4f51b0ecb3b47b23c7087735d201da50cd3ffee6",
+      "sha256": "7101867088e385569c86d50082186283377a4786b444f685f3d2df22b62f54bb",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
@@ -77,7 +77,7 @@
     {
       "path": "plugin/MIGRATION.md",
       "source": "plugin/MIGRATION.md",
-      "sha256": "0a42ea8eb31d724110781acfc6d9f72f9a300215a7f9fdfb3754816b827af40d",
+      "sha256": "ff6720b09caabac943f6c644aa10dc749f3d47003a113724abb5b7da96f61cd0",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
@@ -147,7 +147,7 @@
     {
       "path": "plugin/operator-auth.mjs",
       "source": "plugin/operator-auth.mjs",
-      "sha256": "ce3f4d14b12e7a09b49452ea921ab7c3cef0b5a797ad93dfd45732f21352dc37",
+      "sha256": "ff8d7f674ed79f5e1d76f294c00afd352522099c6fdbfedc3bab8a0db9ddef0f",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
@@ -175,14 +175,14 @@
     {
       "path": "plugin/scanners.mjs",
       "source": "plugin/scanners.mjs",
-      "sha256": "ebeaa61c3c9a3a1afec961c690c7de671b2169e79c1cfd4bad6beba6db5f014b",
+      "sha256": "ef10b16b085690a7a5908e2eb48660d192abb7a05a4c04a0e9bf4df64b793f72",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
     {
       "path": "plugin/smart.mjs",
       "source": "plugin/smart.mjs",
-      "sha256": "43e5a7883b3c218c8f6ff026c676b61d6cfb6bb058f8d1a9b704c57f28c55d0f",
+      "sha256": "9cd39b5445b998f3aebb762b50c9f0bd77def6ec0ff41f5432d3b14097fc03cf",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
