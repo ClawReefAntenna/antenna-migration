@@ -1,218 +1,75 @@
 {
-  "sourceDirty": false,
-  "schema": 1,
-  "kind": "migration",
-  "candidate": "1.6.9",
-  "sourceRevision": "d9351d0d38b0c94f68b9504ca59c8093e5acfe49",
-  "compatibility": {
-    "runtime": "1.6.9 schema 2; compatible with 1.6.8 native state and antenna-plugin-v2 peers",
-    "transport": "antenna-plugin-v2",
-    "limits": "antenna-limits-2",
-    "release_version": "1.6.9"
+  "schema": 2,
+  "application": "antenna-migration",
+  "origin": {
+    "repository": "https://github.com/ClawReefAntenna/antenna-openclaw",
+    "revision": "d9351d0d38b0c94f68b9504ca59c8093e5acfe49"
   },
-  "files": [
+  "note": "App-specific files are now maintained here. Shared files below are pinned copies; update deliberately and rerun app tests. No build-time upstream checkout is required.",
+  "sharedFiles": [
     {
       "path": "LICENSE",
-      "source": "LICENSE",
-      "sha256": "d3919a2a59a79fcf126f18235403bee19c1e0ca47b789b2a41abcc515f0863c4",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/README.md",
-      "source": "migration/README.md",
-      "sha256": "02766c5dcddf17e5174722203d75f400b98c0752c5b1862d1a9ec09d071b520f",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "README.md",
-      "source": "migration/REPOSITORY.md",
-      "sha256": "092cf17344a2fbfc9a072825149f59d8aa301300d8389f23b670c27326415c5b",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/cli.mjs",
-      "source": "migration/cli.mjs",
-      "sha256": "5c3ad1eb5aeec253494482a13ac9485bed783049adb4383ae91d1d675077492a",
-      "mode": "0o755",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/cutover-test.mjs",
-      "source": "migration/cutover-test.mjs",
-      "sha256": "092806008ab350b392c06303d3c927b4a217a946f162548b0e5bf76c75b53325",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/cutover.mjs",
-      "source": "migration/cutover.mjs",
-      "sha256": "c972c4c6b9fd9b6c6f2bc298e99bec58a70f3ba01ed43dcf07accd6512462bc5",
-      "mode": "0o755",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/retire.mjs",
-      "source": "migration/retire.mjs",
-      "sha256": "ba3694220e730ac286e09ae17e10c4b353dfd19dc74ba09e958b7b708b2aa269",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/schema-test.mjs",
-      "source": "migration/schema-test.mjs",
-      "sha256": "31a0e4ad4e80a83df608f4173d1907df48418119490f6c637282eed148edbec2",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/schema.mjs",
-      "source": "migration/schema.mjs",
-      "sha256": "801849f3f2552d3c05c60e5f4ca5b5684d6e04506efbe153216b89ceb0c3fd32",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "plugin/MIGRATION.md",
-      "source": "plugin/MIGRATION.md",
-      "sha256": "ff6720b09caabac943f6c644aa10dc749f3d47003a113724abb5b7da96f61cd0",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "d3919a2a59a79fcf126f18235403bee19c1e0ca47b789b2a41abcc515f0863c4"
     },
     {
       "path": "plugin/capacity.mjs",
-      "source": "plugin/capacity.mjs",
-      "sha256": "ad580501975fedbe4d283ef8eb203a74c92a74457cc8b6f353cc95364f531aea",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "ad580501975fedbe4d283ef8eb203a74c92a74457cc8b6f353cc95364f531aea"
     },
     {
       "path": "plugin/config-write.mjs",
-      "source": "plugin/config-write.mjs",
-      "sha256": "57a5bf03a77c95e847817eb0bc8d2fd902ca363e07ce2e4c2c3a75a581932d73",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "57a5bf03a77c95e847817eb0bc8d2fd902ca363e07ce2e4c2c3a75a581932d73"
     },
     {
       "path": "plugin/dumb-worker.mjs",
-      "source": "plugin/dumb-worker.mjs",
-      "sha256": "e280724cd0e724d1eb2a8a7004877f015c5f23efb98217f0a5494cd6f4ec7e32",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "e280724cd0e724d1eb2a8a7004877f015c5f23efb98217f0a5494cd6f4ec7e32"
     },
     {
       "path": "plugin/envelope.mjs",
-      "source": "plugin/envelope.mjs",
-      "sha256": "c6056378a07b4776ad23097998a75ff24d0bcd4b8aa69cca3f5c9d9b1a4cdab4",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "c6056378a07b4776ad23097998a75ff24d0bcd4b8aa69cca3f5c9d9b1a4cdab4"
     },
     {
       "path": "plugin/inbox.mjs",
-      "source": "plugin/inbox.mjs",
-      "sha256": "5ff324b2ec73b0a580ac50c849b20679edae3ad486c5b83d2d17ddf15cec60f1",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "plugin/legacy-migration.mjs",
-      "source": "plugin/legacy-migration.mjs",
-      "sha256": "ce343407304a0feace257f47b86286679e608b8069bebac74162b664b9a74e59",
-      "mode": "0o755",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "5ff324b2ec73b0a580ac50c849b20679edae3ad486c5b83d2d17ddf15cec60f1"
     },
     {
       "path": "plugin/limits.mjs",
-      "source": "plugin/limits.mjs",
-      "sha256": "844a301ca8826ef19385ce1b3ee8dc176a21928a702eaa35eff91a44f591e99a",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "plugin/migration-check.mjs",
-      "source": "plugin/migration-check.mjs",
-      "sha256": "47b385e772161c7706f05fa026c0c1428419b2833c91acd4031501ed26417cea",
-      "mode": "0o755",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "844a301ca8826ef19385ce1b3ee8dc176a21928a702eaa35eff91a44f591e99a"
     },
     {
       "path": "plugin/migration-warning.mjs",
-      "source": "plugin/migration-warning.mjs",
-      "sha256": "dba850ef95e85b1a6a9d8cf6436a8c794ed6bae816ccfdf714615d1683f949c7",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "dba850ef95e85b1a6a9d8cf6436a8c794ed6bae816ccfdf714615d1683f949c7"
     },
     {
       "path": "plugin/operator-auth.mjs",
-      "source": "plugin/operator-auth.mjs",
-      "sha256": "ff8d7f674ed79f5e1d76f294c00afd352522099c6fdbfedc3bab8a0db9ddef0f",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "ff8d7f674ed79f5e1d76f294c00afd352522099c6fdbfedc3bab8a0db9ddef0f"
     },
     {
       "path": "plugin/policy.mjs",
-      "source": "plugin/policy.mjs",
-      "sha256": "e6bf884b827fc34b6add1475b98acb27f8e21e440d54edbd09c936539f1ca5cc",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "e6bf884b827fc34b6add1475b98acb27f8e21e440d54edbd09c936539f1ca5cc"
     },
     {
       "path": "plugin/rules/default.json",
-      "source": "plugin/rules/default.json",
-      "sha256": "6b939c8d60043644479a6b4f3ecc8e08f06a770ba5be521b601e2b353e49d8dd",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "6b939c8d60043644479a6b4f3ecc8e08f06a770ba5be521b601e2b353e49d8dd"
     },
     {
       "path": "plugin/ruleset.mjs",
-      "source": "plugin/ruleset.mjs",
-      "sha256": "117e3dfecc7c7cab11d56030c9b052e9c077dbebec3d8873523993895ebf2e2d",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "117e3dfecc7c7cab11d56030c9b052e9c077dbebec3d8873523993895ebf2e2d"
     },
     {
       "path": "plugin/scanners.mjs",
-      "source": "plugin/scanners.mjs",
-      "sha256": "ef10b16b085690a7a5908e2eb48660d192abb7a05a4c04a0e9bf4df64b793f72",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "ef10b16b085690a7a5908e2eb48660d192abb7a05a4c04a0e9bf4df64b793f72"
     },
     {
       "path": "plugin/smart.mjs",
-      "source": "plugin/smart.mjs",
-      "sha256": "9cd39b5445b998f3aebb762b50c9f0bd77def6ec0ff41f5432d3b14097fc03cf",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "9cd39b5445b998f3aebb762b50c9f0bd77def6ec0ff41f5432d3b14097fc03cf"
     },
     {
       "path": "plugin/tests/config-write.mjs",
-      "source": "plugin/tests/config-write.mjs",
-      "sha256": "298e37173d8f723eaf809e60e8219293bdd21c4dd2d1b5ddf185ff5163a00bf2",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "plugin/tests/migration-doctor.mjs",
-      "source": "plugin/tests/migration-doctor.mjs",
-      "sha256": "2aee9e74dead64b03bc634ba33b64843e5715907e6900db4d0294d5398f743da",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "298e37173d8f723eaf809e60e8219293bdd21c4dd2d1b5ddf185ff5163a00bf2"
     },
     {
       "path": "plugin/transport.mjs",
-      "source": "plugin/transport.mjs",
-      "sha256": "d4c714503620ffff0ed5971923661a6ebfe8da1bff9d86e613ce8e6d73c31844",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
-    },
-    {
-      "path": "migration/legacy-compat-test.mjs",
-      "source": "migration/legacy-compat-test.mjs",
-      "sha256": "7508fb921f7c38373da508c928794e27b863e15656bc2e55463dbe5fdc9ea205",
-      "mode": "0o644",
-      "ownerTicket": "OC168-SEC-001"
+      "sha256": "d4c714503620ffff0ed5971923661a6ebfe8da1bff9d86e613ce8e6d73c31844"
     }
   ]
 }

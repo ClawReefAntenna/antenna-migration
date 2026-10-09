@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "candidate": "1.6.9",
+  "base_revision": "c30c7d4edbcd42362c899fb69bc51c99d3961b2c",
+  "compatibility": {
+    "runtime": "1.6.9 schema 2; compatible with 1.6.8 native state and antenna-plugin-v2 peers",
+    "transport": "antenna-plugin-v2",
+    "limits": "antenna-limits-2",
+    "release_version": "1.6.9"
+  },
+  "artifacts": {
+    "migration": [
+      "LICENSE",
+      "migration/README.md",
+      "README.md",
+      "migration/cli.mjs",
+      "migration/cutover-test.mjs",
+      "migration/cutover.mjs",
+      "migration/retire.mjs",
+      "migration/schema-test.mjs",
+      "migration/schema.mjs",
+      "plugin/MIGRATION.md",
+      "plugin/capacity.mjs",
+      "plugin/config-write.mjs",
+      "plugin/dumb-worker.mjs",
+      "plugin/envelope.mjs",
+      "plugin/inbox.mjs",
+      "plugin/legacy-migration.mjs",
+      "plugin/limits.mjs",
+      "plugin/migration-check.mjs",
+      "plugin/migration-warning.mjs",
+      "plugin/operator-auth.mjs",
+      "plugin/policy.mjs",
+      "plugin/rules/default.json",
+      "plugin/ruleset.mjs",
+      "plugin/scanners.mjs",
+      "plugin/smart.mjs",
+      "plugin/tests/config-write.mjs",
+      "plugin/tests/migration-doctor.mjs",
+      "plugin/transport.mjs",
+      "migration/legacy-compat-test.mjs",
+      "SOURCE.json",
+      "packaging/README.md"
+    ]
+  }
+}

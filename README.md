@@ -15,3 +15,5 @@ The native plugin and companion are separate downloads from
 
 This repository contains conversion and retirement tools and their dependencies,
 not a legacy installer or relay starter. License: [MIT](LICENSE).
+
+[Build and dependency provenance](packaging/README.md).
