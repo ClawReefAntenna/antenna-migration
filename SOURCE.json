@@ -3,7 +3,7 @@
   "schema": 1,
   "kind": "migration",
   "candidate": "1.6.9",
-  "sourceRevision": "debd13e1f5880e8ee61aebbd29a0ebbed14efc57",
+  "sourceRevision": "d9351d0d38b0c94f68b9504ca59c8093e5acfe49",
   "compatibility": {
     "runtime": "1.6.9 schema 2; compatible with 1.6.8 native state and antenna-plugin-v2 peers",
     "transport": "antenna-plugin-v2",
@@ -21,14 +21,14 @@
     {
       "path": "migration/README.md",
       "source": "migration/README.md",
-      "sha256": "22bd99478d72217d0f683bd8da52f3eadbd86171a56522c8b695d64c851e31cb",
+      "sha256": "02766c5dcddf17e5174722203d75f400b98c0752c5b1862d1a9ec09d071b520f",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
     {
       "path": "README.md",
       "source": "migration/REPOSITORY.md",
-      "sha256": "7101867088e385569c86d50082186283377a4786b444f685f3d2df22b62f54bb",
+      "sha256": "092cf17344a2fbfc9a072825149f59d8aa301300d8389f23b670c27326415c5b",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     },
@@ -119,7 +119,7 @@
     {
       "path": "plugin/legacy-migration.mjs",
       "source": "plugin/legacy-migration.mjs",
-      "sha256": "309c55ca31967154ef77bc9ca4b7d3f3a31c4376d6affcd0008692e64a985391",
+      "sha256": "ce343407304a0feace257f47b86286679e608b8069bebac74162b664b9a74e59",
       "mode": "0o755",
       "ownerTicket": "OC168-SEC-001"
     },
@@ -204,6 +204,13 @@
       "path": "plugin/transport.mjs",
       "source": "plugin/transport.mjs",
       "sha256": "d4c714503620ffff0ed5971923661a6ebfe8da1bff9d86e613ce8e6d73c31844",
+      "mode": "0o644",
+      "ownerTicket": "OC168-SEC-001"
+    },
+    {
+      "path": "migration/legacy-compat-test.mjs",
+      "source": "migration/legacy-compat-test.mjs",
+      "sha256": "7508fb921f7c38373da508c928794e27b863e15656bc2e55463dbe5fdc9ea205",
       "mode": "0o644",
       "ownerTicket": "OC168-SEC-001"
     }
