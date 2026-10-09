@@ -5,9 +5,8 @@
 
 # Explicit legacy migration — v1.6.8
 
-The body below is retained engineering reference, not current installation
-instructions. See the source-only [stopped-host app and recovery](../migration/README.md)
-for the later cutover implementation.
+The body below is historical engineering reference. Use the current migration kit
+guide above for the supported workflow.
 
 Compatibility tier: **documented manual migration**, not seamless live compatibility.
 Do this against an isolated copy first. The original preparation commands below do not apply changes. The separate

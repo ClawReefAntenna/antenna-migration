@@ -24,7 +24,6 @@ transport. If you use self-messaging, configure its signing identity separately.
 Already signed self-peers keep their normal permissions.
 
 Native v1.6.8 and later use the normal update path, not relay migration.
-Experimental schema-1 combined-smart-v1 policy can also be exported as schema 2.
 
 ## Rehearse on an isolated copy
 
@@ -78,21 +77,17 @@ service; schedule it deliberately. Review the staged changes, then:
 node migration/cutover.mjs apply NEW_STAGE --writers-stopped
 ```
 
-The flag records the operator's stopped-writer prerequisite, not another approval
-prompt. A Linux `/proc` check also refuses detected gateway/relay/native writers.
-It cannot observe other PID namespaces, remote hosts or a future process start;
-keep the host quiescent throughout. Other systems use the manual workflow.
-The app never stops/starts services, invokes old setup, enables the plugin,
-rotates credentials, sends messages or automatically rolls back.
+Keep the gateway and all Antenna writers stopped throughout cutover.
+`--writers-stopped` records that prerequisite; the kit also checks for running
+local writers. It leaves services and Antenna activation under your control.
 
-Owned relay roster entries must have the configured relay ID and exactly the old
-root's `agent` workspace. Remove their agent-specific hook allow entry and known
-Bash/echo/jq/cat approvals only; custom approvals and other agents remain.
-Ambiguous agent ownership or direct relay hook mappings require manual review,
-not a wider automatic deletion. Broad hooks, hook tokens, session visibility,
+The kit retires relay entries it can identify as belonging to this installation,
+including their relay-specific hook and shell approvals. Custom approvals and
+other agents remain. If ownership is ambiguous, it stops for manual review.
+Broad hooks, hook tokens, session visibility,
 model registrations, signing identities, lists and group grants stay unchanged.
 Legacy pending, approved-but-unsent and failed inbox items remain untouched.
-Existing HTTP URLs are retained without acknowledgment; HTTPS is never downgraded.
+Existing HTTP settings are preserved; HTTPS connections stay HTTPS.
 
 No temporary-file sweep occurs. To remove confirmed obsolete relay input, add
 `obsoleteTemps` entries to the selection with exact `path`, `sha256` and
@@ -103,14 +98,10 @@ qualify. If a file is still unresolved, leave it out.
 
 ## Interrupted cutover and recovery
 
-Every target must match its original or planned hash before any write. Changes
-to other inputs, newly appeared native state, or changed staged bytes stop the
-operation. Each replacement is validated JSON, fsynced, privately backed up and
-atomically renamed with a final source comparison. Cooperating writers use locks;
-these checks are not an atomic CAS against unrelated programs. Keep writers stopped.
-
-After interruption, remain unavailable. Preserve NEW_STAGE and its RECOVERY.txt;
-rerun the same apply only if its checks pass. It skips exact completed targets.
+The kit stops if source or staged files have changed. Keep writers stopped.
+If cutover is interrupted, leave Antenna disabled and preserve `NEW_STAGE` and its
+`RECOVERY.txt`. Follow those recovery instructions; resuming the same plan skips
+completed changes.
 Do not restore the old relay or broad shell approvals from preimages. To abandon
 cutover, leave Antenna disabled and recover unrelated settings manually from the
 private copies. New holds and replay data must not be replaced by old snapshots.
@@ -122,16 +113,20 @@ explicitly enable/restart, and live-probe admission before advertising migration
 The guide describes optional general-hook token rotation; it is not mandatory.
 Coordinate the peer-profile switch before resuming message delivery.
 
-## Schema-only export and checks
+## Check the prepared installation
+
+Run Doctor against the intended host configuration and matching companion:
+
+```sh
+node plugin/migration-check.mjs doctor HOST_JSON COMPANION_ROOT
+```
+
+## Advanced: export a schema-1 policy
+
+Experimental schema-1 combined-smart-v1 policy can also be exported as schema 2:
 
 ```sh
 node migration/cli.mjs HOST_JSON NEW_POLICY_JSON
-node plugin/migration-check.mjs doctor HOST_JSON COMPANION_ROOT
-node migration/schema-test.mjs
-node migration/cutover-test.mjs
-node migration/legacy-compat-test.mjs
-node plugin/tests/config-write.mjs
-node plugin/tests/migration-doctor.mjs
 ```
 
 Schema export never applies host settings or changes inbox data. Explicit per-peer
