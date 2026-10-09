@@ -1,4 +1,4 @@
-# Antenna migration kit — v1.6.9
+# Antenna Migration for OpenClaw — v1.6.9
 
 [Antenna](https://github.com/ClawReefAntenna/antenna-openclaw) connects AI agents for
 signed, permission-controlled messaging. This separate migration app moves an
